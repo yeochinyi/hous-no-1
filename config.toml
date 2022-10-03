@@ -1,0 +1,277 @@
+#baseurl = "https://hous-no-1.com/"
+bauseurl = "https://yeochinyi.github.io/hous-no-1"
+title = "壹号公馆 Hous No. 1"
+#title = "Hous No 1"
+theme = "hugo-universal-theme"
+#themesDir = "../.."
+languageCode = "en-us"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "zh"
+#defaultContentLanguage = "en"
+[languages]
+    [languages.en]
+        weight= 2
+    [languages.zh]
+        weight= 1
+# Enable comments by entering your Disqus shortname
+disqusShortname = "hous-no-1"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+# number of words of summarized post content (default 70)
+summaryLength = 70
+
+# Define the number of posts per page
+paginate = 10
+
+# not pluralize title pages by default
+pluralizelisttitles = false
+
+[menu]
+
+# Main menu
+[[menu.main]]
+name       = "Home"
+identifier = "menu.home"
+url        = "/"
+weight     = 1
+
+[[menu.main]]
+name       = "Games"
+identifier = "menu.portfolio"
+url        = "img/all-games.jpeg"
+weight     = 3
+
+[[menu.main]]
+name       = "All Games"
+identifier = "section.portfolio"
+url        = ""
+weight     = 1
+parent     = "menu.portfolio"
+post       = 1
+
+[[menu.main]]
+name       = "Mahjong"
+url        = ""
+weight     = 1
+parent     = "section.portfolio"
+
+[[menu.main]]
+name       = "Board Games"
+url        = ""
+weight     = 2
+parent     = "section.portfolio"
+
+[[menu.main]]
+name       = "Prices"
+identifier = "prices"
+url        = "#features"
+weight     = 3
+
+[[menu.main]]
+name       = "Events"
+identifier = "events"
+url        = "#recent_posts"
+weight     = 4
+
+[[menu.main]]
+identifier = "map"
+name       = "Map"
+url        = "#gmap"
+weight     = 5
+
+# Top bar social links menu
+
+[[menu.topbar]]
+weight = 1
+name = "Phone"
+url = "tel:+65"
+pre = "<i class='fas fa-2x fa-phone'></i>"
+
+[[menu.topbar]]
+weight = 3
+name = "Facebook"
+url = "http://facebook.com"
+pre = "<i class='fab fa-2x fa-facebook'></i>"
+
+[[menu.topbar]]
+weight = 4
+name = "Twitter"
+url = "http://twitter.com"
+pre = "<i class='fab fa-2x fa-twitter'></i>"
+
+[[menu.topbar]]
+weight = 5
+name = "Email"
+url = "mailto:ricboy@gmail.com"
+pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[params]
+viewMorePostLink = "/blog/"
+author = "DevCows"
+defaultKeywords = ["devcows", "hugo", "go"]
+mainSections = ["blog"]
+defaultDescription = "Site template made by Devcows using Hugo"
+
+# Social media
+facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
+twitter_site = "hous_no_1" # the Twitter handle of your site (without the '@')
+default_sharing_image = "img/sharing-default.png"
+
+# Google Maps widget: If `googleMapsApiKey` is not set, no key will be passed to Google (which likely results in a broken map widget).
+enableGoogleMaps = true
+#googleMapsApiKey = "AIzaSyAv7Sza8NSp9_l_g8G2vlo0H4ydEPn_2jY"
+#googleMapsApiKey = ""
+
+latitude = "-12.043333"
+longitude = "-77.028333"
+
+# Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+style = "red"
+
+# Since this template is static, the contact form uses www.formspree.io as a
+# proxy. The form makes a POST request to their servers to send the actual
+# email. Visitors can send up to a 50 emails each month for free.
+#
+# What you need to do for the setup?
+#
+# - register your account to https://formspree.io/register
+# - login and create new form
+# - set your form's endpoint url under 'formspree_action' below
+# - upload the generated site to your server
+# - test a dummy email yourself
+# - you're done. Happy mailing!
+#
+# Enable the contact form by entering your Formspree.io endpoint url
+formspree_action = "https://formspree.io/sample/of/endpoint"
+contact_form_ajax = false
+
+# Formspree form supports Google reCAPTCHA Key (type v2).
+# If you use this feature, you should enable reCAPTCHA feature in the Formspree dashboard.
+#
+# By default, Formspree use a redirect page for recaptcha widget.
+# If you use a recaptcha widget in your contact page, you should do next steps.
+# (if you don't want, skip these steps)
+#
+#   1. register your site on Google recaptcha admin page: https://www.google.com/recaptcha/admin
+#   2. select reCAPTCHA v2 and checkbox widget type.
+#   3. remember site key and secret key.
+#   4. enter secret key into "Custom reCAPTCHA Key" field in your Formspree form setting page.
+#   5. change `enableRecaptchaInContactForm` is to true
+#   6. enter site key into `googleRecaptchaKey` to enable a recaptcha widget in your page.
+#
+enableRecaptchaInContactForm = false
+googleRecaptchaKey = "site_key_for_google_recaptcha"
+
+about_us = "<p>Lots of fun and games.</p>"
+copyright = "Copyright (c) 2022, Hous No 1; all rights reserved."
+
+# Format dates with Go's time formatting
+date_format = "January 2, 2022"
+
+dropdown_mouse_over = false
+
+disabled_logo = true
+#logo_text = "Hous No 1"
+logo_text = "壹号公馆 Hous No 1"
+
+logo = "img/hous_no_1.png"
+logo_small = "img/hous_no_1"
+contact_url = "#contact"
+address = """<p 
+class="text-uppercase">
+<strong>壹号公馆 </strong>
+<br>538 Geylang Rd, #02-04, Singapore 389493
+<br>
+</p>
+"""
+
+[permalinks]
+blog = "/blog/:year/:month/:day/:filename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+enable = true
+text = """<p class="hidden-sm hidden-xs">
+</p>
+<p class="hidden-md hidden-lg"><a href="tel:+65" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+<a href="mailto:riczboy@gmail.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+</p>
+"""
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+categories = true
+tags = true
+search = true
+
+[params.carouselCustomers]
+items = 6
+auto_play = false
+slide_speed = 2000
+pagination_speed = 1000
+
+[params.carouselTestimonials]
+items = 4
+auto_play = false
+slide_speed = 2000
+pagination_speed = 1000
+
+[params.carouselHomepage]
+# All carousel items are defined in their own files. You can find example items
+# at 'exampleSite/data/carousel'.
+# For more information take a look at the README.
+enable = false
+auto_play = true
+slide_speed = 2000
+pagination_speed = 1000
+
+[params.features]
+enable = true
+cols = 1 # Default: 3, Available values 2,3,4,6
+# All features are defined in their own files. You can find example items
+# at 'exampleSite/data/features'.
+# For more information take a look at the README.
+
+[params.testimonials]
+enable = false
+# All testimonials are defined in their own files. You can find example items
+# at 'exampleSite/data/testimonials'.
+# For more information take a look at the README.
+title = "Testimonials"
+subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+[params.see_more]
+enable = true
+icon = "far fa-file-alt"
+title = "Do you want to know more?"
+subtitle = "We have prepared for you more than 40 different board games!"
+link_url = ""
+link_text = ""
+
+[params.clients]
+enable = false
+# All clients are defined in their own files. You can find example items
+# at 'exampleSite/data/clients'.
+# For more information take a look at the README.
+title = "Our Clients"
+subtitle = ""
+
+[params.recent_posts]
+enable = true
+title = "From our blog"
+subtitle = "Recent activities:-"
+hide_summary = false
+
+[params.footer.recent_posts]
+enable = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+author = "authors"
+
+[deployment]
+[[deployment.targets]]
+name = "prod"
+URL = "s3://hous-no-1"

@@ -1,0 +1,5 @@
+weight: 2
+name: "Regular Pricing"
+icon: "fas fa-money-bill"
+url: ""
+description: "{{< figure src=img/rates.jpg width=100% >}}"
